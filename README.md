@@ -21,9 +21,10 @@ Simply run:
 `./Moniker.py -p [path] -c [case]`
 
 For example:
+
 `./Moniker.py -p /Users/irving/Documents/ -c Upper`
 
-And Moniker will take care of the rest by properly (un)capitalizing the folders and directories in the specified path.
+And Moniker will take care of the rest by properly capitalizing the first letter of folders and directories in the specified path.
 
 Help
 -----
