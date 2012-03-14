@@ -30,6 +30,7 @@ Help
 -----
 
 For help with using Moniker, run:
+
 `./Moniker.py --help`
 
 Legal
