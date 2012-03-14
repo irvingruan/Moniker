@@ -27,9 +27,39 @@ def help():
 	sys.stderr.write("Example: ./Moniker.py -p ~/Documents/ -c Upper\n")
 	sys.stderr.write("e.g. Find all directories in ~/Documents and change them to proper uppercase for the first letter\n")
 
-def rename_directories(path):
-	directories = os.listdir(path)
-	print directories
+def rename_directories(path, case):
+	directories = os.listdir(os.path.abspath(os.path.expanduser(path)))
+	
+	changedLowerFlag = 0
+	changedUpperFlag = 0
+	filesChanged = 0
+	
+	# We're impartial to files vs directories. Rename both for consistency's sake
+	for item in directories:
+		if case.lower() == "upper": 
+			if item[0].isupper():
+				pass
+			else:
+				changedUpperFlag = 1
+				os.rename(os.path.join(path, item), os.path.join(path, item[0].upper() + item[1:]))
+				newName = item[0].upper() + item[1:]
+				sys.stdout.write("Renamed `" + item + "` to `" + newName + "`\n")
+				filesChanged += 1		
+		elif case.lower() == "lower":
+			if item[0].islower():
+				pass
+			else:
+				changedLowerFlag = 1
+				os.rename(os.path.join(path, item), os.path.join(path, item[0].lower() + item[1:]))
+				newName = item[0].lower() + item[1:]
+				sys.stdout.write("Renamed `" + item + "` to `" + newName + "`\n")
+				filesChanged += 1
+				
+	if filesChanged == 0:
+		sys.stdout.write("No changes made. All files and directories are already properly " + case + "-cased.\n")
+	else:
+		sys.stdout.write("\nTotal number of files/directories renamed: " + str(filesChanged) + "\n")
+				
 
 def main():
 	if len(sys.argv) != 5:	
@@ -55,10 +85,7 @@ def main():
 		usage()
 		return False
 		
-	
-	rename_directories(path)	
+	rename_directories(path, case)	
 		
 if __name__ == "__main__":
 	main()
-	
-	
