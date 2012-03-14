@@ -27,6 +27,10 @@ def help():
 	sys.stderr.write("Example: ./Moniker.py -p ~/Documents/ -c Upper\n")
 	sys.stderr.write("e.g. Find all directories in ~/Documents and change them to proper uppercase for the first letter\n")
 
+def rename_directories(path):
+	directories = os.listdir(path)
+	print directories
+
 def main():
 	if len(sys.argv) != 5:	
 		if len(sys.argv) == 2 and (sys.argv[1] == "--help" or sys.argv[1] == "--h"):
@@ -52,8 +56,7 @@ def main():
 		return False
 		
 	
-		
-		
+	rename_directories(path)	
 		
 if __name__ == "__main__":
 	main()
