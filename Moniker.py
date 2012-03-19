@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-# Author: Irving Ruan <irvingruan@gmail.com>
+# Written by Irving Y. Ruan <irvingruan@gmail.com>
+# All rights reserved.
 
 # See README for instructions on how to run Moniker
 
