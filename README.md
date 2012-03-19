@@ -4,7 +4,7 @@ Moniker
 A directory and file mass-renaming-editor
 =========================================
 
-Author: Irving Ruan, [irvingruan@gmail.com](mailto:irvingruan@gmail.com)
+Author: Irving Ruan <[irvingruan@gmail.com](mailto:irvingruan@gmail.com)>
 
 About
 -----
@@ -36,4 +36,4 @@ For help with using Moniker, run:
 Legal
 -----
 
-Moniker is Copyright (c) 2012 Irving Ruan and is MIT licensed. The full disclaimer and text of the license can be found in LICENSE.
+Moniker is Copyright (c) 2012 Irving Ruan and is BSD licensed. The full disclaimer and text of the license can be found in LICENSE.

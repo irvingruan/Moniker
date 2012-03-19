@@ -34,7 +34,7 @@ def rename_directories(path, case):
 	changedUpperFlag = 0
 	filesChanged = 0
 	
-	# We're impartial to files vs directories. Rename both for consistency's sake
+	# We're impartial to files vs directories. Rename both for consistency's    sake
 	for item in directories:
 		if case.lower() == "upper": 
 			if item[0].isupper():
